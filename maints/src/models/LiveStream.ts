@@ -5,7 +5,7 @@ export class LiveStream extends Video {
   readonly isLive = true;
 
   constructor(id: string, title: string, author: string, concurrentViewers = 0) {
-    super(id, title, null, author); // no fixed duration
+    super(id, title, null, author); // no fixed duration // sem duração fixa
     this.concurrentViewers = concurrentViewers;
   }
 
@@ -17,4 +17,5 @@ export class LiveStream extends Video {
   info(): string {
     return `[LIVE] ${this.title} - ${this.author} - ${this.concurrentViewers} espectadores`;
   }
+
 }
